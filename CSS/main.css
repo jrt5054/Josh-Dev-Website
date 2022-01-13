@@ -25,11 +25,18 @@ ul {
   padding: 0;
 }
 
+.development {
+  font-size: 20px;
+  color: white;
+  background: red;
+}
+
 footer ul li {
   list-style: none;
 }
 
 .icon {
+  font-family: Aktura-Regular, serif;
   width: 100px;
   height: 100px;
   background: blue;
@@ -41,22 +48,3 @@ footer ul li {
   background: cyan;
   margin: auto;
 }
-/* 
-body:before, body:after {
-  content: "";
-  position: fixed;
-  background: #900;
-  left: 0;
-  right: 0;
-  height: 10px;
-}
-body:before {
-  top: 0;
-}
-body:after {
-  bottom: 0;
-}
-body {
-  border-left: var(--border-thickness) solid #900;
-  border-right: var(--border-thickness) solid #900;  
-} */
