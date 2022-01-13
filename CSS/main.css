@@ -1,50 +1,43 @@
 :root {
-  box-sizing: border-box;
-  /* --border-thickness: 10px; */
+  --yellow: #f0ff29
 }
 
-main {
+html {
+  background: black;
+}
+
+header {
   display: flex;
-  flex-direction: column;
-  width: 100vw;
-  height: 100vh;
-  /* margin-top: var(--border-thickness); */
 }
 
-footer {
-  position: absolute;
-  bottom: 0;
-  background: red;
+nav {
+
 }
 
-ul {
-  width: 100vw;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  padding: 0;
-}
-
-.development {
-  font-size: 20px;
-  color: white;
-  background: red;
-}
-
-footer ul li {
-  list-style: none;
-}
-
-.icon {
+.logo {
+  background: white;
   font-family: Aktura-Regular, serif;
-  width: 100px;
-  height: 100px;
-  background: blue;
-  color: white;
-  text-align: center;
 }
 
-.intro-wrapper {
-  background: cyan;
-  margin: auto;
+.yellow-text {
+  color: var(--yellow);
+}
+
+button {
+  background: none;
+  color: var(--yellow);
+  border: 2px solid white;
+  padding: 1em;
+}
+
+.body-text {
+  color: white;
+}
+
+.projects {
+  background: var(--yellow);
+  color: black;
+  text-decoration: none;
+  padding: .2em;
+  line-height: 2em;
 }
