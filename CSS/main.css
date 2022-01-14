@@ -60,6 +60,7 @@ video {
   left: -20px;
   width: 110%;
   height: 100%;
+  z-index: -10;
   background: black;
   mix-blend-mode: overlay;
 }
@@ -71,11 +72,10 @@ video {
 .logo {
   margin-top: 57px;
   margin-left: 84px;
+  color: white;
   font-family: Aktura-Regular, serif;
   width: 100px;
   font-size: 100px;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: rgb(255, 255, 255);
 }
 
 .yellow-text {
