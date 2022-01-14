@@ -18,61 +18,51 @@
 </head>
 
 <script>
+  function pauseVideo() {
+    var video = document.getElementById("myVideo")
+    video.pause();
+  }
+
   function copyToClipboard() {
     navigator.clipboard.writeText("josh@thisisjoshtaylor.com");
     }
 </script>
 
-<body>
+<body onload="setTimeout(pauseVideo, 9250)">
+  <div class="overlay"></div>
   <header>
     <div class="logo">jrt</div>
     <nav>
       <ul>
         <li><a href="JRT - Resume.pdf" target="_blank">Resume</a></li>
         <li><a href="https://twitter.com/thisisjtaylor">Twitter</a></li>
+        <li><a href="www.linkedin.com/in/thisisjoshtaylor">LinkedIn</a></li>
         <li><a href="https://github.com/jrt5054">Github</a></li>
       </ul>
     </nav>
   </header>
+  <video id="myVideo" src="video/background_video.mp4" autoplay muted loop></video>
   <main>
-    <p class="yellow-text">Hi, I'm Josh Taylor.</p>
-    <p class="body-text">Front-end developer based in Brooklyn</p>
-    <p class="body-text">I worked as an Electrical Engineer for the last 10 years in the Building Design and Construction industry and recently graduated from Noble Desktop's Full Stack Development program.</p>
-    <p class="body-text">I am looking to take the problem solving skills I developed and apply them to creating unique and inventive websites.</p>
-    <button onclick="copyToClipboard()">Get In Touch</button>
-    <p class="body-text">Current Projects Include:</p>
-    <ul>
-      <li><a class="projects" href="">Velty</a></li>
-      <li><a class="projects" href="">Voltage Drop Calculator</a></li>
-      <li><a class="projects" href="">Recipe App</a></li>
-    </ul>
+    <div class="intro-wrapper">
+      <h1 class="yellow-text">Hi, I'm Josh Taylor.</h1>
+      <h2 class="body-text">Front-end developer based in Brooklyn</h2>
+    </div>
+    <div class="button-wrapper">
+      <button onclick="copyToClipboard()">Get In Touch</button>
+    </div>
+    <div class="about-me-wrapper">
+      <p class="body-text">I worked as an Electrical Engineer for the last 10 years in the Building Design and Construction industry and recently graduated from Noble Desktop's Full Stack Development program.</p>
+      <p class="body-text">I am looking to take the problem solving skills I developed and apply them to creating unique and inventive websites.</p>
+    </div>
+    
+    <div class="current-projects-wrapper">
+      <p class="body-text">Current Projects Include:</p>
+      <ul>
+        <li><a class="projects" href="https://getvelty.com/" target="_blank">Velty</a></li>
+        <li><a class="projects" href="https://jrt5054.github.io/vd-calc/" target="_blank">Voltage Drop Calculator</a></li>
+        <li><a class="projects" href="https://github.com/jrt5054/cookbook" target="_blank">Recipe App (In Development)</a></li>
+      </ul>
+    </div>
   </main>
 </body>
 </html>
-
-
-<!-- <body>
-  <main>
-    <div class="icon">ICON</div>
-    <div class="intro-wrapper">
-      
-      <div class="hello">
-        Hi I'm Josh Taylor, Front-End Developer... You have problems, I have solutions         
-      </div>
-      <div class="hello-text">
-        Based in Brooklyn, I worked for 10 years in the Building Design and Construction industry as an Electrical Engineer. I am looking to take the problem solving skills I developed and apply them to creating unique and inventive websites.
-      </div>
-      <div class="development">
-        If you can read this, this site is VERY much under development... but while you are here check out my <a target="_blank" href="https://jrt5054.github.io/vd-calc/">Voltage Drop Calculator</a>.<br>Its a little confusing if you arent an electrical engineer so here is a link to the github <a href="https://github.com/jrt5054/vd-calc/blob/master/README.md">README</a>
-      </div>
-    </div>
-    <footer>
-      <ul>
-        <li><a href="https://github.com/jrt5054">github</a></li>
-        <li><a href="https://twitter.com/thisisjtaylor">twitter</a></li>
-        <li><a href="JRT - Resume.pdf" target="_blank">resume</a></li>
-      </ul>
-    </footer>
-  </main>
-</body>
-</html> -->

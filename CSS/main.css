@@ -1,22 +1,81 @@
+* {
+  box-sizing: border-box;
+}
+
 :root {
-  --yellow: #f0ff29
+  --yellow: #f0ff29;
+  --body-text-font: sans-serif;
+  --body-text-size: 17px;
 }
 
 html {
   background: black;
+  overflow: hidden;
 }
 
 header {
   display: flex;
+  justify-content: space-between;
 }
 
-nav {
-
+h1 {
+  font-size: 42px;
+  font-family: var(--body-text-font);
 }
+
+h2 {
+  font-size: 20px;
+  font-family: var(--body-text-font);
+}
+
+header nav ul {
+  list-style-type: none;
+}
+
+main {
+  position: absolute;
+  bottom: 50px;
+  display: grid;
+  grid-template-columns: 50vw 50vw;
+  grid-row: auto auto;
+  grid-column-gap: 100px;
+  grid-row-gap: 20px;
+}
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -9999;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+.overlay
+{
+  position: absolute;
+  top: 0;
+  left: -20px;
+  width: 110%;
+  height: 100%;
+  background: black;
+  mix-blend-mode: overlay;
+}
+
+/* nav {
+
+} */
 
 .logo {
-  background: white;
+  margin-top: 57px;
+  margin-left: 84px;
   font-family: Aktura-Regular, serif;
+  width: 100px;
+  font-size: 100px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(255, 255, 255);
 }
 
 .yellow-text {
@@ -26,12 +85,23 @@ nav {
 button {
   background: none;
   color: var(--yellow);
+  font-size: var(--body-text-size);
+  font-family: var(--body-text-font);
   border: 2px solid white;
-  padding: 1em;
+  padding: 22px;
+  cursor: pointer;
+}
+
+button:active {
+  position: relative;
+  top: 2px;
+
 }
 
 .body-text {
   color: white;
+  font-size: 15px;
+  font-family: var(--body-text-font);
 }
 
 .projects {
