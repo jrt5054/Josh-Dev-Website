@@ -1,44 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- favicon files -->
-  <link rel="apple-touch-icon" sizes="180x180" href="Images/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon//favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon//favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <!-- CSS -->
-  <link rel="stylesheet" href="CSS/normalize.css">
-  <link rel="stylesheet" href="CSS/main.css">
-  <link rel="stylesheet" href="Fonts/Fonts/WEB/css/aktura.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon files -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="Images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="Images/favicon//favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="Images/favicon//favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="CSS/normalize.css" />
+    <link rel="stylesheet" href="CSS/main.css" />
 
-  <title>thisisjoshtaylor</title>
-</head>
-<body>
-  <main>
-    <div class="icon">ICON</div>
-    <div class="intro-wrapper">
-      
-      <div class="hello">
-        Hi I'm Josh Taylor, Front-End Developer... You have problems, I have solutions         
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>thisisjoshtaylor</title>
+  </head>
+
+  <script>
+    function pauseVideo() {
+      var video = document.getElementById("myVideo");
+      video.pause();
+    }
+
+    function copyToClipboard() {
+      navigator.clipboard.writeText("josh@thisisjoshtaylor.com");
+    }
+  </script>
+
+  <body onload="setTimeout(pauseVideo, 9250)">
+    <div class="overlay"></div>
+    <header>
+      <div class="logo">jrt</div>
+      <nav>
+        <ul>
+          <li><a href="JRT - Resume.pdf" target="_blank">Resume</a></li>
+          <li>
+            <a href="https://twitter.com/thisisjtaylor" target="_blank"
+              >Twitter</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/thisisjoshtaylor"
+              target="_blank"
+              >LinkedIn</a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/jrt5054" target="_blank">Github</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <video
+      id="myVideo"
+      src="video/background_video.mp4"
+      autoplay
+      muted
+      loop
+    ></video>
+    <main>
+      <div class="intro-wrapper">
+        <h1 class="yellow-text">Hi, I'm Josh Taylor.</h1>
+        <h2>Front-end developer based in Brooklyn</h2>
       </div>
-      <div class="hello-text">
-        Based in Brooklyn, I worked for 10 years in the Building Design and Construction industry as an Electrical Engineer. I am looking to take the problem solving skills I developed and apply them to creating unique and inventive websites.
+      <div class="button-wrapper">
+        <button onclick="copyToClipboard()">Get In Touch</button>
       </div>
-      <div class="development">
-        If you can read this, this site is VERY much under development... but while you are here check out my <a target="_blank" href="https://jrt5054.github.io/vd-calc/">Voltage Drop Calculator</a>.<br>Its a little confusing if you arent an electrical engineer so here is a link to the github <a href="https://github.com/jrt5054/vd-calc/blob/master/README.md">README</a>
+      <div class="about-me-wrapper">
+        <p class="body-text">
+          I worked as an Electrical Engineer for the last 10 years in the
+          Building Design and Construction industry and recently graduated from
+          Noble Desktop's Full Stack Development program.
+        </p>
+        <p class="body-text">
+          I am looking to take the problem solving skills I developed and apply
+          them to creating unique and inventive websites.
+        </p>
       </div>
-    </div>
-    <footer>
-      <ul>
-        <li><a href="https://github.com/jrt5054">github</a></li>
-        <li><a href="https://twitter.com/thisisjtaylor">twitter</a></li>
-        <li><a href="JRT - Resume.pdf" target="_blank">resume</a></li>
-      </ul>
-    </footer>
-  </main>
-</body>
+
+      <div class="current-projects-wrapper">
+        <p class="projects-title">Current Projects Include:</p>
+        <ul>
+          <li>
+            <a class="projects" href="https://getvelty.com/" target="_blank"
+              >Velty</a
+            >
+          </li>
+          <li>
+            <a
+              class="projects"
+              href="https://jrt5054.github.io/vd-calc/"
+              target="_blank"
+              >Voltage Drop Calculator</a
+            >
+          </li>
+          <li>
+            <a
+              class="projects"
+              href="https://github.com/jrt5054/cookbook"
+              target="_blank"
+              >Recipe App (In Development)</a
+            >
+          </li>
+        </ul>
+      </div>
+    </main>
+  </body>
 </html>
-
