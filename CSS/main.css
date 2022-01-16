@@ -1,11 +1,26 @@
+/* ====================================================== */
+/* GENERAL FORMATTING */
+/* ====================================================== */
+/* Fonts */
+@font-face {
+  font-family: 'Aktura-Regular';
+  src: url('../Fonts/Fonts/WEB/fonts/Aktura-Regular.woff2') format('woff2'),
+       url('../Fonts/Fonts/WEB/fonts/Aktura-Regular.woff') format('woff'),
+       url('../Fonts/Fonts/WEB/fonts/Aktura-Regular.ttf') format('truetype');
+       font-weight: 400;
+       font-display: swap;
+       font-style: normal;
+}
+
 * {
   box-sizing: border-box;
 }
 
 :root {
   --yellow: #f0ff29;
-  --body-text-font: sans-serif;
-  --body-text-size: 17px;
+  --body-text-font: Alata, sans-serif;
+  --left-margin: 15vw;
+  --header-margin-top: 70px;
 }
 
 html {
@@ -13,35 +28,22 @@ html {
   overflow: hidden;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
+.yellow-text {
+  color: var(--yellow);
 }
 
-h1 {
-  font-size: 42px;
-  font-family: var(--body-text-font);
-}
-
-h2 {
-  font-size: 20px;
-  font-family: var(--body-text-font);
-}
-
-header nav ul {
+ul {
   list-style-type: none;
+  padding-left: 0;
 }
 
-main {
-  position: absolute;
-  bottom: 50px;
-  display: grid;
-  grid-template-columns: 50vw 50vw;
-  grid-row: auto auto;
-  grid-column-gap: 100px;
-  grid-row-gap: 20px;
+p {
+  margin: 0;
 }
 
+/* ====================================================== */
+/* BACKGROUND */
+/* ====================================================== */
 video {
   position: absolute;
   top: 0;
@@ -65,49 +67,187 @@ video {
   mix-blend-mode: overlay;
 }
 
-/* nav {
-
-} */
-
-.logo {
-  margin-top: 57px;
-  margin-left: 84px;
+/* ====================================================== */
+/* HEADER */
+/* ====================================================== */
+header nav ul li a {
+  text-decoration: none;
   color: white;
-  font-family: Aktura-Regular, serif;
-  width: 100px;
-  font-size: 100px;
 }
 
-.yellow-text {
-  color: var(--yellow);
+/* ====================================================== */
+/* INTRODUCTION */
+/* ====================================================== */
+h1 {
+  font-family: var(--body-text-font);
+  margin: 0;
+  font-weight: 400;
 }
 
+h2 {
+  font-family: var(--body-text-font);
+  font-weight: 400;
+  color: white;
+  margin: 0;
+}
+
+.body-text {
+  color: white;
+  font-family: var(--body-text-font);
+}
+
+/* ====================================================== */
+/* GET IN TOUCH BUTTON */
+/* ====================================================== */
 button {
   background: none;
   color: var(--yellow);
-  font-size: var(--body-text-size);
   font-family: var(--body-text-font);
   border: 2px solid white;
-  padding: 22px;
   cursor: pointer;
 }
 
 button:active {
   position: relative;
   top: 2px;
-
 }
 
-.body-text {
+/* ====================================================== */
+/* CURRENT PROJECTS */
+/* ====================================================== */
+.projects-title {
   color: white;
-  font-size: 15px;
   font-family: var(--body-text-font);
+  font-size: 25px;
 }
 
 .projects {
   background: var(--yellow);
   color: black;
   text-decoration: none;
-  padding: .2em;
-  line-height: 2em;
+  font-family: var(--body-text-font);
 }
+
+.projects {
+  list-style-type: none;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* SMALL SCREENS */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+@media screen and (max-width: 749px) {
+  /* ====================================================== */
+  /* GENERAL FORMATTING */
+  /* ====================================================== */
+  .body-text {
+    font-size: 13px;
+  }
+  /* ====================================================== */
+  /* BACKGROUND */
+  /* ====================================================== */
+  
+  /* ====================================================== */
+  /* HEADER */
+  /* ====================================================== */
+  
+  /* ====================================================== */
+  /* INTRODUCTION */
+  /* ====================================================== */
+  
+  /* ====================================================== */
+  /* GET IN TOUCH BUTTON */
+  /* ====================================================== */
+  
+  /* ====================================================== */
+  /* CURRENT PROJECTS */
+  /* ====================================================== */
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* LARGE SCREENS */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+@media screen and (min-width: 750px) {
+  /* ====================================================== */
+  /* GENERAL FORMATTING */
+  /* ====================================================== */
+  main {
+    position: absolute;
+    bottom: 0px;
+    display: grid;
+    grid-template-columns: 45vw 45vw;
+    grid-row: auto auto;
+    grid-column-gap: 100px;
+    grid-row-gap: 20px;
+    margin-bottom: 70px;
+    padding-left: var(--left-margin);
+  }
+
+
+  /* ====================================================== */
+  /* BACKGROUND */
+  /* ====================================================== */
+  
+  /* ====================================================== */
+  /* HEADER */
+  /* ====================================================== */
+  .logo {
+    margin-top: var(--header-margin-top);
+    margin-left: var(--left-margin);
+    color: white;
+    font-family: "Aktura-Regular", serif;
+    width: 100px;
+    font-size: 109px;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  header nav ul {
+    padding: 0;
+    margin-top: var(--header-margin-top);
+    margin-right: 80px;
+  }
+  
+  header nav ul li {
+    display: inline-block;
+    padding-left: 2em;
+    font-family: var(--body-text-font);
+    font-size: 23px;
+  }
+  /* ====================================================== */
+  /* INTRODUCTION */
+  /* ====================================================== */
+  h1 {
+    font-size: 74px;
+    margin-bottom: 10px;
+  }
+  
+  h2 {
+    font-size: 36px;
+  }
+
+  .body-text {
+    font-size: 25px;
+    padding-bottom: 1em;
+  }
+  /* ====================================================== */
+  /* GET IN TOUCH BUTTON */
+  /* ====================================================== */
+  button {
+    font-size: 25px;
+    padding: 22px;
+  }
+  /* ====================================================== */
+  /* CURRENT PROJECTS */
+  /* ====================================================== */
+  .projects {
+    padding: .2em;
+    line-height: 2em;
+    font-size: 25px;
+  }
+}
+
+
