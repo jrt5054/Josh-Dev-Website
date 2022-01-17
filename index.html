@@ -34,15 +34,22 @@
       rel="stylesheet"
     />
 
-    <title>thisisjoshtaylor</title>
+    <title>Josh Taylor, Web Developer</title>
   </head>
 
   <script>
     function pauseVideo() {
-      var video = document.getElementById("myVideo");
-      video.pause();
-      alert("pause");
+      var iframe = document.querySelector('iframe');
+      var player = new Vimeo.Player(iframe);
+      player.pause();
+      // alert("pause");
     }
+
+    // function pauseVideo() {
+    //   var video = document.getElementById("myVideo");
+    //   video.pause();
+    //   alert("pause");
+    // }
 
     function copyToClipboard() {
       navigator.clipboard.writeText("josh@thisisjoshtaylor.com");
@@ -83,8 +90,8 @@
     ></video> -->
 
     <div class="vimeo-wrapper">
-      <iframe SameSite=None src="https://player.vimeo.com/video/666564312?background=1?h=3a05132ca5&autoplay=1&title=0&byline=0&portrait=0"
-           frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      <iframe id="myVideo" src="https://player.vimeo.com/video/666567283?background=1?h=60e3d8c9a8&autoplay=1&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      <script src="https://player.vimeo.com/api/player.js"></script>
     </div>
 
     <main>
