@@ -45,6 +45,8 @@
     }
 
     function copyToClipboard() {
+      var button = document.getElementById("contact-button");
+      button.innerHTML = "Email Copied!"
       navigator.clipboard.writeText("josh@thisisjoshtaylor.com");
     }
   </script>
@@ -108,7 +110,7 @@
         <h2>Front-end developer based in Brooklyn</h2>
       </div>
       <div class="contact">
-        <button onclick="copyToClipboard()">Get In Touch</button>
+        <button id="contact-button" onclick="copyToClipboard()">Get In Touch</button>
         <p class="copy-message">(click to copy email to clipboard)</p>
       </div>
       <div class="about-me">

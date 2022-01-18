@@ -141,7 +141,6 @@ button {
   font-family: var(--body-text-font);
   border: 2px solid white;
   cursor: pointer;
-  padding: 24px;
 }
 
 button:active {
@@ -260,6 +259,8 @@ button:active {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    width: 164px;
+    height: 61px;
   }
 
   .copy-message {
@@ -358,6 +359,8 @@ button:active {
   /* ====================================================== */
   button {
     font-size: 25px;
+    width: 272px;
+    height: 101px;
   }
   /* ====================================================== */
   /* CURRENT PROJECTS */
