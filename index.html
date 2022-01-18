@@ -34,22 +34,15 @@
       rel="stylesheet"
     />
 
-    <title>Josh Taylor, Web Developer</title>
+    <title>Josh Taylor | Web Developer</title>
   </head>
 
   <script>
     function pauseVideo() {
-      var iframe = document.querySelector('iframe');
+      var iframe = document.querySelector("iframe");
       var player = new Vimeo.Player(iframe);
       player.pause();
-      // alert("pause");
     }
-
-    // function pauseVideo() {
-    //   var video = document.getElementById("myVideo");
-    //   video.pause();
-    //   alert("pause");
-    // }
 
     function copyToClipboard() {
       navigator.clipboard.writeText("josh@thisisjoshtaylor.com");
@@ -57,10 +50,43 @@
   </script>
 
   <body onload="setTimeout(pauseVideo, 9250)">
+    
     <div class="overlay"></div>
-    <header>
-      <div class="logo">jrt</div>
-      <nav>
+    <div class="vimeo-wrapper">
+      <iframe
+        id="myVideo"
+        src="https://player.vimeo.com/video/666567283?background=1?h=60e3d8c9a8&autoplay=1&title=0&byline=0&portrait=0"
+        frameborder="0"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+      <script src="https://player.vimeo.com/api/player.js"></script>
+    </div>
+
+    <main class="container">
+      <div class="logo-div">
+        <div class="logo">jrt</div>
+        <label for="mobile-socials" class="menu-button">
+          <svg  viewBox="0 0 100 80" width="40" height="40">
+            <rect width="100" height="10"></rect>
+            <rect y="30" width="100" height="10"></rect>
+            <rect y="60" width="100" height="10"></rect>
+          </svg>
+        </label>
+      </div>
+      <input id="mobile-socials" type="checkbox">
+      <div class="socials">
+        <div class="mobile-socials-logo">jrt</div>
+        <label for="mobile-socials">
+          <svg class="close-button" viewBox="0 0 40 40" width="40" height="40" stroke="white" stroke-width="3" overflow="visible">
+            <line x1="0" y1="0" x2="30" y2="30" />
+            <line x1="30" y1="0" x2="0" y2="30" />
+          </svg>
+        </label>
+        <!-- <svg class="close-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50" height="50" overflow="visible" stroke="white" stroke-width="10" stroke-linecap="round">
+          <line x1="0" y1="0" x2="50" y2="50" />
+          <line x1="50" y1="0" x2="0" y2="50" />
+       </svg> -->
         <ul>
           <li><a href="JRT - Resume.pdf" target="_blank">Resume</a></li>
           <li>
@@ -79,30 +105,16 @@
             <a href="https://github.com/jrt5054" target="_blank">Github</a>
           </li>
         </ul>
-      </nav>
-    </header>
-    <!-- <video
-      id="myVideo"
-      src="https://player.vimeo.com/video/666564312?h=3a05132ca5&autoplay=1&title=0&byline=0&portrait=0?background=1"
-      autoplay
-      muted
-      loop
-    ></video> -->
+      </div>
 
-    <div class="vimeo-wrapper">
-      <iframe id="myVideo" src="https://player.vimeo.com/video/666567283?background=1?h=60e3d8c9a8&autoplay=1&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-      <script src="https://player.vimeo.com/api/player.js"></script>
-    </div>
-
-    <main>
-      <div class="intro-wrapper">
+      <div class="intro">
         <h1 class="yellow-text">Hi, I'm Josh Taylor.</h1>
         <h2>Front-end developer based in Brooklyn</h2>
       </div>
-      <div class="button-wrapper">
+      <div class="contact">
         <button onclick="copyToClipboard()">Get In Touch</button>
       </div>
-      <div class="about-me-wrapper">
+      <div class="about-me">
         <p class="body-text">
           I worked as an Electrical Engineer for the last 10 years in the
           Building Design and Construction industry and recently graduated from
@@ -113,8 +125,7 @@
           them to creating unique and inventive websites.
         </p>
       </div>
-
-      <div class="current-projects-wrapper">
+      <div class="current-projects">
         <p class="projects-title">Current Projects Include:</p>
         <ul>
           <li>
@@ -143,7 +154,3 @@
     </main>
   </body>
 </html>
-
-<!-- <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/666564312?h=3a05132ca5&autoplay=1" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script> -->
-
-<!-- <iframe src="https://player.vimeo.com/video/666564312?h=3a05132ca5&autoplay=1&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe> -->
