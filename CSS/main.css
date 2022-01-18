@@ -94,8 +94,9 @@ p {
 }
 
 /* ====================================================== */
-/* HEADER */
+/* LOGO/SOCIALS */
 /* ====================================================== */
+
 .socials a {
   text-decoration: none;
   color: white;
@@ -140,12 +141,19 @@ button {
   font-family: var(--body-text-font);
   border: 2px solid white;
   cursor: pointer;
-  padding: 22px;
+  padding: 24px;
 }
 
 button:active {
   position: relative;
   top: 2px;
+}
+
+.copy-message {
+  font-family: var(--body-text-font);
+  color: rgb(82, 82, 82);
+  font-size: 13px;
+  margin-top: 10px;
 }
 
 /* ====================================================== */
@@ -197,7 +205,7 @@ button:active {
   /* ====================================================== */
   
   /* ====================================================== */
-  /* HEADER */
+  /* LOGO/SOCIALS */
   /* ====================================================== */
   .logo, .mobile-socials-logo {
     font-size: 100px;
@@ -253,6 +261,10 @@ button:active {
     margin-left: auto;
     margin-right: auto;
   }
+
+  .copy-message {
+    text-align: center;
+  }
   /* ====================================================== */
   /* CURRENT PROJECTS */
   /* ====================================================== */
@@ -288,7 +300,7 @@ button:active {
   /* ====================================================== */
   
   /* ====================================================== */
-  /* HEADER */
+  /* LOGO/SOCIALS */
   /* ====================================================== */
   .logo-div {
     margin-top: 50px;
