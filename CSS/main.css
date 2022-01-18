@@ -3,13 +3,13 @@
 /* ====================================================== */
 /* Fonts */
 @font-face {
-  font-family: 'Aktura-Regular';
-  src: url('../Fonts/Fonts/WEB/fonts/Aktura-Regular.woff2') format('woff2'),
-       url('../Fonts/Fonts/WEB/fonts/Aktura-Regular.woff') format('woff'),
-       url('../Fonts/Fonts/WEB/fonts/Aktura-Regular.ttf') format('truetype');
-       font-weight: 400;
-       font-display: swap;
-       font-style: normal;
+  font-family: "Aktura-Regular";
+  src: url("../Fonts/Fonts/WEB/fonts/Aktura-Regular.woff2") format("woff2"),
+    url("../Fonts/Fonts/WEB/fonts/Aktura-Regular.woff") format("woff"),
+    url("../Fonts/Fonts/WEB/fonts/Aktura-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
 }
 
 * {
@@ -40,17 +40,29 @@ p {
   margin: 0;
 }
 
-.logo-div { grid-area: logo; }
+.logo-div {
+  grid-area: logo;
+}
 
-.socials { grid-area: socials; }
+.socials {
+  grid-area: socials;
+}
 
-.intro { grid-area: intro; }
+.intro {
+  grid-area: intro;
+}
 
-.contact { grid-area: contact; }
+.contact {
+  grid-area: contact;
+}
 
-.about-me { grid-area: about-me; }
+.about-me {
+  grid-area: about-me;
+}
 
-.current-projects { grid-area: current-projects; }
+.current-projects {
+  grid-area: current-projects;
+}
 
 #mobile-socials {
   display: none;
@@ -74,15 +86,14 @@ p {
   width: 100vw;
   height: 56.25vw;
   min-height: 100vh;
-  min-width: 177.77vh; 
+  min-width: 177.77vh;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-} 
+}
 
-.overlay
-{
+.overlay {
   position: fixed;
   top: 0;
   left: 0px;
@@ -106,7 +117,8 @@ p {
   font-family: var(--body-text-font);
 }
 
-.logo, .mobile-socials-logo {
+.logo,
+.mobile-socials-logo {
   color: white;
   font-family: "Aktura-Regular", serif;
 }
@@ -169,44 +181,44 @@ button:active {
   text-decoration: none;
   font-family: var(--body-text-font);
   list-style-type: none;
-  padding: .2em;
+  padding: 0.2em;
   line-height: 2em;
 }
-
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* SMALL SCREENS */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 @media screen and (max-width: 749px) {
   /* ====================================================== */
-  /* GENERAL FORMATTING */
+  /* (SMALL) GENERAL FORMATTING */
   /* ====================================================== */
   .body-text {
     font-size: 13px;
     margin-bottom: 1em;
   }
 
-  .container {  
+  .container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr .5fr .75fr 1fr 1fr;
+    grid-template-rows: 1fr 0.5fr 0.75fr 1fr 1fr;
     /* grid-auto-flow: row; */
     grid-template-areas:
       "logo"
       "intro"
       "contact"
-      "about-me" 
+      "about-me"
       "current-projects";
     padding: var(--small-screen-padding);
   }
   /* ====================================================== */
-  /* BACKGROUND */
+  /* (SMALL) BACKGROUND */
   /* ====================================================== */
-  
+
   /* ====================================================== */
-  /* LOGO/SOCIALS */
+  /* (SMALL) LOGO/SOCIALS */
   /* ====================================================== */
-  .logo, .mobile-socials-logo {
+  .logo,
+  .mobile-socials-logo {
     font-size: 100px;
   }
 
@@ -227,11 +239,12 @@ button:active {
     line-height: 50px;
   }
 
-  .menu-button, .close-button{
+  .menu-button,
+  .close-button {
     position: absolute;
     top: var(--small-screen-padding);
     right: var(--small-screen-padding);
-    fill:white;
+    fill: white;
     cursor: pointer;
   }
 
@@ -239,19 +252,19 @@ button:active {
     left: 0;
   }
   /* ====================================================== */
-  /* INTRODUCTION */
+  /* (SMALL) INTRODUCTION */
   /* ====================================================== */
   h1 {
     font-size: 26px;
     margin-bottom: 10px;
   }
-  
+
   h2 {
     font-size: 14px;
     margin-bottom: 2rem;
   }
   /* ====================================================== */
-  /* GET IN TOUCH BUTTON */
+  /* (SMALL) GET IN TOUCH BUTTON */
   /* ====================================================== */
 
   button {
@@ -267,23 +280,22 @@ button:active {
     text-align: center;
   }
   /* ====================================================== */
-  /* CURRENT PROJECTS */
+  /* (SMALL) CURRENT PROJECTS */
   /* ====================================================== */
   .projects-title {
     font-size: 15px;
   }
 }
 
-
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* LARGE SCREENS */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 @media screen and (min-width: 750px) {
   /* ====================================================== */
-  /* GENERAL FORMATTING */
+  /* (LARGE) GENERAL FORMATTING */
   /* ====================================================== */
 
-  .container {  
+  .container {
     margin-left: 10%;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -297,16 +309,16 @@ button:active {
   }
 
   /* ====================================================== */
-  /* BACKGROUND */
+  /* (LARGE) BACKGROUND */
   /* ====================================================== */
-  
+
   /* ====================================================== */
-  /* LOGO/SOCIALS */
+  /* (LARGE) LOGO/SOCIALS */
   /* ====================================================== */
   .logo-div {
     margin-top: 50px;
   }
-  
+
   .logo {
     font-size: 109px;
   }
@@ -314,7 +326,7 @@ button:active {
   .mobile-socials-logo {
     display: none;
   }
-  
+
   .socials ul {
     padding: 0;
     margin-top: var(--header-margin-top);
@@ -322,28 +334,29 @@ button:active {
     display: flex;
     justify-content: space-between;
   }
-  
+
   .socials ul li {
     display: inline-block;
     font-size: 23px;
   }
 
-  .socials { 
-    grid-area: socials; 
+  .socials {
+    grid-area: socials;
   }
 
-  .menu-button, .close-button {
+  .menu-button,
+  .close-button {
     display: none;
   }
 
   /* ====================================================== */
-  /* INTRODUCTION */
+  /* (LARGE) INTRODUCTION */
   /* ====================================================== */
   h1 {
     font-size: 74px;
     margin-bottom: 10px;
   }
-  
+
   h2 {
     font-size: 36px;
     margin-bottom: 2rem;
@@ -355,7 +368,7 @@ button:active {
     padding-right: 8rem;
   }
   /* ====================================================== */
-  /* GET IN TOUCH BUTTON */
+  /* (LARGE) GET IN TOUCH BUTTON */
   /* ====================================================== */
   button {
     font-size: 25px;
@@ -363,7 +376,7 @@ button:active {
     height: 101px;
   }
   /* ====================================================== */
-  /* CURRENT PROJECTS */
+  /* (LARGE) CURRENT PROJECTS */
   /* ====================================================== */
 
   .projects-title {
@@ -373,5 +386,3 @@ button:active {
     font-size: 25px;
   }
 }
-
-
