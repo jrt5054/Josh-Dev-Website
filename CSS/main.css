@@ -27,6 +27,23 @@ html {
   background: rgb(224, 224, 224);
 }
 
+body {
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1800px;
+}
+
+.hover-effect {
+  transform: scale(1);
+  transition: 0.3s;
+}
+
+.hover-effect:hover {
+  transform: scale(1.1);
+}
+
 .yellow-text {
   color: var(--yellow);
 }
@@ -181,8 +198,14 @@ button:active {
   text-decoration: none;
   font-family: var(--body-text-font);
   list-style-type: none;
-  padding: 0.2em;
+  padding: 0.3em 0.8em;
   line-height: 2em;
+}
+
+.current-projects ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px 0;
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
