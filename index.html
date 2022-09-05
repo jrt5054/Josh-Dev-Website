@@ -39,13 +39,13 @@
 
   <script>
     function pauseVideo() {
-      var iframe = document.querySelector("iframe");
-      var player = new Vimeo.Player(iframe);
+      const iframe = document.querySelector("iframe");
+      const player = new Vimeo.Player(iframe);
       player.pause();
     }
 
     function copyToClipboard() {
-      var button = document.getElementById("contact-button");
+      const button = document.getElementById("contact-button");
       button.innerHTML = "Email Copied!";
       navigator.clipboard.writeText("josh@thisisjoshtaylor.com");
     }
