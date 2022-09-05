@@ -31,17 +31,29 @@ body {
   overflow: hidden;
 }
 
+/* for very large screens */
 .container {
   max-width: 1800px;
 }
 
-.hover-effect {
+.hover-grow {
   transform: scale(1);
   transition: 0.3s;
 }
 
-.hover-effect:hover {
+.hover-grow:hover {
   transform: scale(1.1);
+}
+
+.hover-animate:hover {
+  animation: grow 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes grow {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.1);}
+  100% {transform: scale(1);}
 }
 
 .yellow-text {
