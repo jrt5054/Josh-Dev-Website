@@ -179,7 +179,10 @@ h2 {
 /* GET IN TOUCH BUTTON */
 /* ====================================================== */
 button {
-  background: none;
+  background: linear-gradient(to right, gray 50%, transparent 50%);
+  background-size: 200% 100%;
+  background-position:right bottom;
+  transition: all 0.2s ease;
   color: var(--yellow);
   font-family: var(--body-text-font);
   border: 2px solid white;
@@ -188,11 +191,16 @@ button {
   animation: wiggle 6s infinite;
 }
 
+button:hover {
+  background-position:left bottom;
+}
+
 @keyframes wiggle {
   0% {transform: rotate(0deg);}
-  3% {transform: rotate(-2deg);}
-  4% {transform: rotate(2deg);}
-  5% {transform: rotate(0deg);}
+  52% {transform: rotate(0deg);}
+  53% {transform: rotate(-2deg);}
+  54% {transform: rotate(2deg);}
+  55% {transform: rotate(0deg);}
   100% {transform: rotate(0deg);}
 }
 
